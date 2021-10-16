@@ -6,7 +6,7 @@ const EVENTS_DATA = [
         location: '123 startprogramming st Dev City',
         date: '2021-10-10',
         image: 'image/programming.jpg',
-        isFeatured: false,
+        isFeatured: true,
     },
     {
         id: 02,
@@ -16,7 +16,7 @@ const EVENTS_DATA = [
         location: '123 stopbeingshy st Dev City',
         date: '2021-10-10',
         image: 'images/networking.jpg',
-        isFeatured: true,
+        isFeatured: false,
     },
     {
         id: 03,
@@ -31,13 +31,22 @@ const EVENTS_DATA = [
 ]
 
 export function getFeaturedEvents() {
+    return EVENTS_DATA.filter((event) => event.isFeatured)
+}
+export function getAllEvents() {
     return EVENTS_DATA
 }
+
 export function getFilteredEvents(dateFilter) {
-    const eventDate = new Date(event.date)
-    return (
-        eventDate.getFullYear() === year && eventDate.getMonth() === month - 1
-    )
+    const { year, month } = dateFilter
+
+    let filteredEvents = EVENTS_DATA.filter((event) => {
+        const eventDate = new Date(event.date)
+        return (
+            eventDate.getFullYear() === year &&
+            eventDate.getMonth() === month - 1
+        )
+    })
 }
 export function getEventById(id) {
     return EVENTS_DATA.find((event) => event.id === id)
