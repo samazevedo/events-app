@@ -1,3 +1,5 @@
+import EventList from '../../components/events/event-list'
+
 function AllEventsPage() {
     return (
         <div>
