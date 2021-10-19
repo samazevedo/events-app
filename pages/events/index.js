@@ -1,9 +1,11 @@
+import { getAllEvents } from '../../event-data'
 import EventList from '../../components/events/event-list'
 
 function AllEventsPage() {
+    const allEvents = getAllEvents()
     return (
         <div>
-            <h1>All Events Page</h1>
+            <EventList events={allEvents} />
         </div>
     )
 }

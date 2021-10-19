@@ -13,7 +13,7 @@ const EVENTS_DATA = [
         title: 'Networking for introverts',
         description:
             "The hardest thing is not coding for you right. Let' build our Networking together",
-        location: '123 stopbeingshy st, , 01010 Dev City',
+        location: '123 stopbeingshy st,  01010 Dev City',
         date: '2020-10-10',
         image: 'images/networking.jpg',
         isFeatured: false,
@@ -23,7 +23,7 @@ const EVENTS_DATA = [
         title: 'How to be successful programming',
         description:
             'The path to sucess in the programming world. How to find the shortcuts to success',
-        location: '123 successfulldev st, , 01010 Dev City',
+        location: '123 successfulldev st, 01010 Dev City',
         date: '2020-10-10',
         image: 'images/success.jpg',
         isFeatured: true,
