@@ -4,7 +4,7 @@ const EVENTS_DATA = [
         title: 'Programming for everyone',
         description: 'Everyone can learn to code! We learn together everyday',
         location: '123 startprogramming st, 01010 Dev City',
-        date: '2020-10-10',
+        date: '2020-08-10',
         image: 'images/programming.jpg',
         isFeatured: true,
     },
@@ -14,7 +14,7 @@ const EVENTS_DATA = [
         description:
             "The hardest thing is not coding for you right. Let' build our Networking together",
         location: '123 stopbeingshy st,  01010 Dev City',
-        date: '2020-10-10',
+        date: '2021-10-10',
         image: 'images/networking.jpg',
         isFeatured: false,
     },
@@ -47,6 +47,7 @@ export function getFilteredEvents(dateFilter) {
             eventDate.getMonth() === month - 1
         )
     })
+    return filteredEvents
 }
 export function getEventById(id) {
     return EVENTS_DATA.find((event) => event.id === id)
